@@ -19,13 +19,13 @@ export default function (state = initialState, action) {
         }
         case types.UPDATE_REVIEW:{
             const { reviews } = state;
-            reviews[action.site] = reviews[action.site].map((review)=>{
+            state.reviews[action.site] = state.reviews[action.site].map((review)=>{
                 if(review.id=== action.response.id){
                     return review.responses = action.response.responses
                 }
             })
 
-            return Object.assign({},state,{reviews:reviews})
+            return Object.assign({},state,{reviews:state.reviews})
         }
         default:
             return state;

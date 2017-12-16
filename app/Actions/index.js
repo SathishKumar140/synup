@@ -72,7 +72,7 @@ export function postReview(locationId,id, content, site){
 
 function updateReview(response, site){
     return {
-        type:types.UPDATE_REVIEW,
+        type:constant.UPDATE_REVIEW,
         response,
         site
     }

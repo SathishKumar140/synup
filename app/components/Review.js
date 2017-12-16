@@ -29,6 +29,7 @@ class ReviewCard extends Component{
   submit(id, site){
     const { dispatch, locationId } = this.props;
     const { content } = this.state;
+    this.cancel();
     dispatch(actions.postReview(locationId,id,content, site))
   }
   render(){
